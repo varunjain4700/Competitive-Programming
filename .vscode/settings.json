@@ -1,0 +1,19 @@
+{
+    "files.associations": {
+        "algorithm": "cpp",
+        "iostream": "cpp",
+        "vector": "cpp",
+        "ios": "cpp",
+        "utility": "cpp",
+        "queue": "cpp",
+        "stack": "cpp",
+        "set": "cpp",
+        "__split_buffer": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "string": "cpp"
+    },
+    "problems.showCurrentInStatus": true,
+    "C_Cpp.intelliSenseEngineFallback": "Enabled",
+    "C_Cpp.errorSquiggles": "Enabled"
+}
