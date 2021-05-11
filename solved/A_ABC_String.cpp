@@ -12,9 +12,9 @@ using namespace std;
 
 void solve()
 {
-    string s,t;
+    string s, t;
     cin >> s;
-    t=s;
+    t = s;
     int n = s.size();
     char a = s[0];
     char b = s[n - 1];
@@ -53,9 +53,10 @@ void solve()
                 }
             }
         }
-        if(flag==0&&op==0&&cl==0){
-            cout<<"YES"<<endl;
-        return;
+        if (flag == 0 && op == 0 && cl == 0)
+        {
+            cout << "YES" << endl;
+            return;
         }
         for (int i = 0; i < n; i++)
         {
@@ -90,8 +91,8 @@ void solve()
             cout << "YES" << endl;
             return;
         }
-        else 
-            cout<<"NO"<<endl;
+        else
+            cout << "NO" << endl;
     }
 }
 

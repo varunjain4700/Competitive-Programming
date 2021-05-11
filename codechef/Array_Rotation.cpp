@@ -12,26 +12,31 @@ using namespace std;
 
 void solve()
 {
-    int n;
+    int n, q;
     cin >> n;
-    string s;
+    ll x, sum = 0;
     rep(i, n)
     {
-        if (i % 4 == 0 || i % 4 == 1)
-            s += 'a';
-        else
-        {
-            s += 'b';
-        }
+        cin >> x;
+        sum += x;
     }
-    cout << s << endl;
+    while(sum<0)
+        sum+=mod;
+    ll ans = sum;
+    cin>>q;
+    rep(i, q)
+    {
+        cin >> x;
+        ans = (ans % mod + ans % mod) % mod;
+        cout << ans << endl;
+    }
 }
 
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    solve();
+        solve();
 
     return 0;
 }

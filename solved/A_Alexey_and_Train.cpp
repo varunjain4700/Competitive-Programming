@@ -20,9 +20,8 @@ void solve()
         cin >> a[i] >> b[i];
     }
     int t[n + 1];
-    rep(i, n)
-            cin >>
-        t[i];
+    rep(i, n){
+            cin >>t[i];}
     int arrival = 0, depart = 0;
     rep(i, n)
     {

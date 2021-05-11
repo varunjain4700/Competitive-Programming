@@ -12,26 +12,35 @@ using namespace std;
 
 void solve()
 {
-    int n;
-    cin >> n;
-    string s;
+    int n, x, y;
+    cin >> n >> x;
+    set<int> s;
     rep(i, n)
     {
-        if (i % 4 == 0 || i % 4 == 1)
-            s += 'a';
-        else
-        {
-            s += 'b';
-        }
+        cin >> y;
+        s.insert(y);
     }
-    cout << s << endl;
+    int available = n - s.size();
+    if (available >= x)
+    {
+        cout << s.size() << endl;
+        return;
+    }
+    else
+    {
+        int required = x - available;
+        cout << s.size() - required << endl;
+    }
 }
 
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    solve();
+    ll tt;
+    cin >> tt;
+    while (tt--)
+        solve();
 
     return 0;
 }

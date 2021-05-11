@@ -12,31 +12,27 @@ int main()
     while (tt--)
     {
         cin >> n;
-        vector<int> v;
-        ll x;
+        int f[101] = {0};
         rep(i, n)
         {
-            cin >> x;
-            v.push_back(x);
+            cin >> f[i];
         }
-        x = 0;
-        ll k = 0, j = 0;
-        rep(i, n)
+        int ans = f[0];
+        int fuel = f[0];
+        for (int i = 1; i < n; i++)
         {
-            if (x == 0)
+            if (fuel > 0)
             {
-                cout << v[k] << " ";
-                k++;
-                x = 1;
+                ans += f[i];
+                fuel += f[i];
+                fuel--;
             }
             else
             {
-                x = 0;
-                cout << v[n - 1 - j] << " ";
-                j++;
+                break;
             }
         }
-        cout << endl;
+        cout << ans << endl;
     }
     return 0;
 }

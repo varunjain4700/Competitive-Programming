@@ -21,8 +21,7 @@ int main()
         cin >> n;
         ll a[n + 1];
         rep(i, n)
-                cin >>
-            a[i];
+                cin >>a[i];
         ll x;
         int i;
         for (i = 0; i < n - 1; i++)

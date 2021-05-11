@@ -5,44 +5,47 @@ using namespace std;
 #define mp make_pair
 #define ub upper_bound
 #define lb lower_bound
-//#define endl "\n" 
+//#define endl "\n"
 #define mod 1000000007
-#define rep(i,n) for(int i=0;i<n;i++)
-#define repr(i,n) for(int i=n-1;i>=0;i--)
+#define rep(i, n) for (int i = 0; i < n; i++)
+#define repr(i, n) for (int i = n - 1; i >= 0; i--)
 
-int query(int x){
+int query(int x)
+{
     int y;
-    cout<<"? "<<x<<endl;
-    cin>>y;
+    cout << "? " << x << endl;
+    cin >> y;
     return y;
 }
-void solve(int n){
-    int left=1;
-    int right=n;
+void solve(int n)
+{
+    int left = 1;
+    int right = n;
     int mid;
-    while(left<right){
-        mid=(left+right)/2;
-        int a=query(mid);
-        int b=query(mid+1);
-        if(a<b)
+    while (left < right)
+    {
+        mid = (left + right) / 2;
+        int a = query(mid);
+        int b = query(mid + 1);
+        if (a < b)
         {
-            right=mid;
+            right = mid;
         }
         else
         {
-            left=mid+1;
-        }   
+            left = mid + 1;
+        }
     }
-    cout<<"! "<<left<<endl;
+    cout << "! " << left << endl;
 }
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     int n;
-    cin>>n;
+    cin >> n;
     solve(n);
 
-     
-	return 0;
+    return 0;
 }

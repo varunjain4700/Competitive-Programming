@@ -5,38 +5,40 @@ using namespace std;
 #define mp make_pair
 #define ub upper_bound
 #define lb lower_bound
-#define endl "\n" 
+#define endl "\n"
 #define mod 1000000007
-#define rep(i,n) for(int i=0;i<n;i++)
-#define repr(i,n) for(int i=n-1;i>=0;i--)
+#define rep(i, n) for (int i = 0; i < n; i++)
+#define repr(i, n) for (int i = n - 1; i >= 0; i--)
 
-
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-     ll tt,n;
+    ll tt, n;
     cin >> tt;
-   while(tt--){
-    cin>>n;
-    int a[n+1];
-    rep(i,n)
-        cin>>a[i];
-    sort(a,a+n);
-    int cnt=0;
-    for(int i=0;i<n;i++)
+    while (tt--)
     {
-       
-        for(int j=0;j<i;j++)
+        cin >> n;
+        int a[n + 1];
+        rep(i, n)
         {
-            if(a[i]>a[j])
+            cin >> a[i];
+        }
+        sort(a, a + n);
+        int cnt = 0;
+        for (int i = 0; i < n; i++)
+        {
+
+            for (int j = 0; j < i; j++)
             {
-                cnt++;
-                break;
+                if (a[i] > a[j])
+                {
+                    cnt++;
+                    break;
+                }
             }
         }
+        cout << cnt << endl;
     }
-    cout<<cnt<<endl;
-     
-    }
-	return 0;
+    return 0;
 }
